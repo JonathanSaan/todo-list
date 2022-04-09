@@ -1,2 +1,2 @@
 ## todo-list
-A todo list done with React Js.
+A todo list made with React Js.
