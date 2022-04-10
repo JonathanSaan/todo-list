@@ -10,6 +10,14 @@ body {
     background-color: #4044CF;
 }
 
+.todo {
+  &-title {
+    text-align: center;
+    color: #FFF;
+    margin: 0 5px 10px 0;
+  }
+}
+
 .App {
   display: flex;
 
@@ -20,11 +28,7 @@ body {
     height: auto;
     padding: 20px;
     background-color: #141321;
-    h1 {
-      text-align: center;
-      color: #FFF;
-      margin: 0 5px 10px 0;
-    }
+
     form {
       input {
         outline: none;
