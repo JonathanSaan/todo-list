@@ -33,7 +33,7 @@ function App() {
         <h1>Todo list</h1>
         <form onSubmit={handleSubmit}>
           <input value={novoItem} type="text" onChange={value => setNovoItem(value.target.value)} placeholder="Add a todo" />
-          <button className="add" onClick={() => addNewItem()}>
+          <button className="add" onClick={addNewItem}>
             <p>+</p>
           </button>
         </form>
