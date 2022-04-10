@@ -17,14 +17,13 @@ function App() {
       alert('Add a todo!');
       return;
     };
-    setLista([...lista, novoItem]);
+    setLista(oldlista => [...oldlista, novoItem]);
     setNovoItem("");
   };
   
+  
   const deleteItem = (index) => {
-    const tmpArray = [...lista];
-    tmpArray.splice(index, 1);
-    setLista(tmpArray);
+    setLista(lista => lista.filter((_, i) => i !== index))  
   };
   
   return (
@@ -32,9 +31,9 @@ function App() {
       <div className="container">
         <h1>Todo list</h1>
         <form onSubmit={handleSubmit}>
-          <input value={novoItem} type="text" onChange={value => setNovoItem(value.target.value)} placeholder="Add a todo" />
-          <button className="add" onClick={() => addNewItem()}>
-          <p>+</p>
+          <input value={novoItem} type="text" onChange={event => setNovoItem(event.target.value)} placeholder="Add a todo" />
+          <button className="add" onClick={addNewItem}>
+            <p>+</p>
           </button>
         </form>
         <List listDiv={lista} deleteItem={deleteItem} />

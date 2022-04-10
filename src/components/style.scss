@@ -6,24 +6,27 @@
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     background-color: #4044CF;
 }
 
-div.App {
+.App {
   display: flex;
-  div.container {
+  
+  .container {
     margin: 20px auto;
     border-radius: 2px;
     min-height: 20rem;
     height: auto;
     padding: 20px;
     background-color: #141321;
+    
     h1 {
       text-align: center;
       color: #FFF;
       margin: 0 5px 10px 0;
     }
+    
     form {
       input {
         outline: none;
@@ -31,18 +34,21 @@ div.App {
         padding: 5px;
         margin: 0 10px 0 0;
       }
-      button.add {
+      
+      .add {
         color: #FFF;
         background-color: #4044CF;
         align-items: center;
         border: none;
         padding: 2.3px 10px 5px 10px;
         p {
-            font-size: 1rem;
-          }
+          font-size: 1rem;
+        }
+        
       }
     }
-    .list {
+
+    .todo-list {
       margin: 20px 0;
       padding: 5px;
       height: 2rem;
@@ -50,20 +56,23 @@ div.App {
       background-color: #FFF;
       display: flex;
       align-items: center;
-      input {
+      
+      &--checkbox {
         margin: 0 10px 0 0;
       }
-      input:checked ~ p {
+      
+      &--checkbox:checked ~ p {
         text-decoration: line-through;
         color: gray;
       }
-      button.trash {
+      
+      &--button-remove {
         position: absolute;
-        align-items: center;
         background: none;
         border: none;
         margin: .2rem 0 0 12.5rem;
       }
+      
     }
   }
 }
