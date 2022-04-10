@@ -17,7 +17,7 @@ function App() {
       alert('Add a todo!');
       return;
     };
-    setLista([...lista, novoItem]);
+    setLista((oldLista) => ([...oldLista, novoItem]));
     setNovoItem("");
   };
   
