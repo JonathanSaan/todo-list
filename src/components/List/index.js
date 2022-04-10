@@ -1,22 +1,19 @@
 import { BsFillTrashFill } from "react-icons/bs";
 
-export function List({ listDiv }) {
+export function List({ listDiv, deleteItem }) {
       
   return (
     <>
-      {listDiv.length > 0 ? (
-        listDiv.map((list) => 
+        {listDiv.map((list,index) => 
           <div className="list">
             <input type="checkbox"/>
-            <p>{list.dado} </p>
-            <button className="trash">
+            <p>{list} </p>
+            <button className="trash" onClick={() => deleteItem(index)}>
                 <BsFillTrashFill size={17} color="black" />
             </button>
           </div>)
-        ) : (
-          alert('adicione')
-      )}
+        }
   </>
-  )
+  );
     
-}
+};
