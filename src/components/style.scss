@@ -10,9 +10,10 @@ body {
     background-color: #4044CF;
 }
 
-div.App {
+.App {
   display: flex;
-  div.container {
+
+  .container {
     margin: 20px auto;
     border-radius: 2px;
     min-height: 20rem;
@@ -31,7 +32,7 @@ div.App {
         padding: 5px;
         margin: 0 10px 0 0;
       }
-      button.add {
+      .add {
         color: #FFF;
         background-color: #4044CF;
         align-items: center;
@@ -57,7 +58,7 @@ div.App {
         text-decoration: line-through;
         color: gray;
       }
-      button.trash {
+      .trash {
         position: absolute;
         align-items: center;
         background: none;
