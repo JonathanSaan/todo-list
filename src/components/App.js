@@ -34,7 +34,7 @@ function App() {
         <form onSubmit={handleSubmit}>
           <input value={novoItem} type="text" onChange={value => setNovoItem(value.target.value)} placeholder="Add a todo" />
           <button className="add" onClick={() => addNewItem()}>
-          <p>+</p>
+            <p>+</p>
           </button>
         </form>
         <List listDiv={lista} deleteItem={deleteItem} />
