@@ -5,25 +5,25 @@ import { List } from "./List";
 
 function App() {
   
-  const [lista, setLista] = useState([]);
-  const [novoItem, setNovoItem] = useState("");
+  const [list, setList] = useState([]);
+  const [newItem, setNewItem] = useState("");
   
   const handleSubmit = (e) => {
     e.preventDefault();
   };
   
   const addNewItem = () => {
-    if (novoItem.length <= 0) {
+    if (newItem.length <= 0) {
       alert('Add a todo!');
       return;
     };
-    setLista(oldlista => [...oldlista, novoItem]);
-    setNovoItem("");
+    setList(oldlist => [...oldlist, newItem]);
+    setNewItem("");
   };
   
   
   const deleteItem = (index) => {
-    setLista(lista => lista.filter((_, i) => i !== index))  
+    setList(list => list.filter((_, i) => i !== index))  
   };
   
   return (
@@ -31,12 +31,12 @@ function App() {
       <div className="container">
         <h1>Todo list</h1>
         <form onSubmit={handleSubmit}>
-          <input value={novoItem} type="text" onChange={event => setNovoItem(event.target.value)} placeholder="Add a todo" />
+          <input value={newItem} type="text" onChange={event => setNewItem(event.target.value)} placeholder="Add a todo" />
           <button className="add" onClick={addNewItem}>
             <p>+</p>
           </button>
         </form>
-        <List listDiv={lista} deleteItem={deleteItem} />
+        <List listDiv={list} deleteItem={deleteItem} />
       </div>
     </div>
   );
