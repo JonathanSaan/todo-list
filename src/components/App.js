@@ -30,16 +30,16 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <h1 className="todo-title">Todo list</h1>
+        <h1 className="todo-header">Todo list</h1>
         <form onSubmit={handleSubmit}>
           <input 
             value={novoItem} 
-            className="todo--input-text"
+            className="todo-form--input-text"
             type="text" 
             onChange={event => setNovoItem(event.target.value)} 
             placeholder="Add a todo" 
           />
-          <button className="todo--button-add" onClick={addNewItem}>
+          <button className="todo-form--button-add" onClick={addNewItem}>
             <p>+</p>
           </button>
         </form>
