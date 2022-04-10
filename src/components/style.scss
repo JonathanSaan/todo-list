@@ -5,48 +5,57 @@
   margin: 0;
 }
 
+body {
+    height: 100vh;
+    background-color: #4044CF;
+}
 
 div.App {
-    display: flex;
-    background-color: #4044CF;
-    height: 100vh;
-  div {
+  display: flex;
+  div.container {
     margin: 20px auto;
-    max-height: 15rem;
+    border-radius: 2px;
+    min-height: 20rem;
     height: auto;
-    padding: 15px;
+    padding: 20px;
     background-color: #141321;
     h1 {
       text-align: center;
       color: #FFF;
       margin: 0 5px 10px 0;
     }
-    input {
-      outline: none;
-      border: none;
-      padding: 5px;
-      margin: 0 10px 0 0;
-    }
-    button.add {
-      color: #FFF;
-      background-color: #4044CF;
-      align-items: center;
-      border: none;
-      padding: 2.3px 10px 5px 10px;
-      p {
-          font-size: 1rem;
-        }
+    form {
+      input {
+        outline: none;
+        border: none;
+        padding: 5px;
+        margin: 0 10px 0 0;
+      }
+      button.add {
+        color: #FFF;
+        background-color: #4044CF;
+        align-items: center;
+        border: none;
+        padding: 2.3px 10px 5px 10px;
+        p {
+            font-size: 1rem;
+          }
+      }
     }
     .list {
+      margin: 20px 0;
       padding: 5px;
       height: 2rem;
       width: 100%;
       background-color: #FFF;
       display: flex;
       align-items: center;
+      input {
+        margin: 0 10px 0 0;
+      }
       input:checked ~ p {
-          text-decoration: line-through;
-          color: gray;
+        text-decoration: line-through;
+        color: gray;
       }
       button.trash {
         position: absolute;
