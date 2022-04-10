@@ -32,8 +32,14 @@ function App() {
       <div className="container">
         <h1 className="todo-title">Todo list</h1>
         <form onSubmit={handleSubmit}>
-          <input value={novoItem} type="text" onChange={event => setNovoItem(event.target.value)} placeholder="Add a todo" />
-          <button className="add" onClick={addNewItem}>
+          <input 
+            value={novoItem} 
+            className="todo--input-text"
+            type="text" 
+            onChange={event => setNovoItem(event.target.value)} 
+            placeholder="Add a todo" 
+          />
+          <button className="todo--button-add" onClick={addNewItem}>
             <p>+</p>
           </button>
         </form>
