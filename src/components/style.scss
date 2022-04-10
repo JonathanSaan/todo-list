@@ -10,6 +10,19 @@ body {
     background-color: #4044CF;
 }
 
+.App {
+  display: flex;
+
+  .container {
+    margin: 20px auto;
+    border-radius: 2px;
+    min-height: 20rem;
+    height: auto;
+    padding: 20px;
+    background-color: #141321;
+  }
+}
+
 .todo {
   &-title {
     text-align: center;
@@ -59,18 +72,5 @@ body {
       border: none;
       margin: .2rem 0 0 12.5rem;
     }
-  }
-}
-
-.App {
-  display: flex;
-
-  .container {
-    margin: 20px auto;
-    border-radius: 2px;
-    min-height: 20rem;
-    height: auto;
-    padding: 20px;
-    background-color: #141321;
   }
 }
