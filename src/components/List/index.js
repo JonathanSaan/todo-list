@@ -4,7 +4,7 @@ export function List({ listDiv, deleteItem }) {
       
   return (
       listDiv.map((list,index) => 
-        <div className="list">
+        <div className="list" key={`list-item-${index}`}>
           <input type="checkbox"/>
           <p>{list}</p>
           <button className="trash" onClick={() => deleteItem(index)}>
